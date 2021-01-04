@@ -2,12 +2,16 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + ' details'">
+    <a [title]="product.name + ' details'" [style]="{ display: 'block' }">
       {{ product.name }}
     </a>
 
     <p *ngIf="product.description">
       Description: {{ product.description }}
     </p>
+
+    <button (click)="share()">
+      Share
+    </button>
   </h3>
 </div>
