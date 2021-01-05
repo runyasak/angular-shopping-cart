@@ -9,6 +9,7 @@ import { CartComponent } from './cart/cart.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ShippingComponent } from './shipping/shipping.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     ProductDetailsComponent,
     ProductListComponent,
     TopBarComponent,
+    ShippingComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
       { path: '', component: ProductListComponent },
       { path: 'cart', component: CartComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'shipping', component: ShippingComponent },
     ]),
   ],
   bootstrap: [ AppComponent ],
