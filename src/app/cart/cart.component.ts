@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/cart.service';
+import type { Product } from 'src/interfaces/Product.interface';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
+  items: Product[] = [];
 
-  constructor() { }
+  constructor(
+    private cartService: CartService,
+  ) { }
 
   ngOnInit(): void {
+    this.items = this.cartService.getItems();
   }
 
 }
